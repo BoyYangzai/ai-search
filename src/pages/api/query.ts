@@ -25,8 +25,10 @@ export default async function handler(
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Cache-Control", "no-cache, no-transform");
   res.setHeader("X-Accel-Buffering", "no");
+  //Cros
+  res.setHeader("Access-Control-Allow-Origin", "*");
   // 创建一个Readable流用于响应
-  const readable = new Readable({ read() {} });
+  const readable = new Readable({ read() { } });
   readable.pipe(res);
 
   // 第一步：获取与用户问题相关的数据
